@@ -2,8 +2,8 @@ services:
   - type: web
     name: prengaconstruction
     runtime: python
-    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate
-    startCommand: gunicorn PrengaConstruction.wsgi:application
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate --noinput
+    startCommand: python manage.py migrate --noinput && gunicorn PrengaConstruction.wsgi:application
     envVars:
       - key: DJANGO_DEBUG
         value: "False"
