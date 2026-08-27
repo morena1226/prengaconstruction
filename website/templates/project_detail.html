@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sq">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ project.title }} | Prenga Construction</title>
+        <style>
+            :root { --ink: #18221f; --muted: #64706b; --gold: #d79a45; --paper: #f3f0e8; --white: #fffdf8; --line: #d8d5cc; }
+            * { box-sizing: border-box; }
+            body { margin: 0; color: var(--ink); background: var(--paper); font-family: Georgia, 'Times New Roman', serif; }
+            a { color: inherit; }
+            .topbar { background: var(--ink); color: #fff; border-bottom: 4px solid var(--gold); }
+            .container { width: min(1100px, calc(100% - 36px)); margin: auto; }
+            .top-nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+            .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-size: 1.05rem; }
+            .badge { position: relative; width: 48px; height: 38px; display: grid; place-items: end center; padding-bottom: 4px; color: var(--ink); background: var(--gold); font: 900 .82rem/1 Arial, sans-serif; letter-spacing: -.08em; clip-path: polygon(50% 0, 100% 35%, 100% 100%, 0 100%, 0 35%); }
+            .badge::before { content: ''; position: absolute; inset: 5px 6px 7px; border: 1px solid rgba(24,34,31,.55); clip-path: polygon(50% 0, 100% 38%, 100% 100%, 0 100%, 0 38%); }
+            .badge::after { content: ''; position: absolute; top: 3px; left: 50%; width: 1px; height: 14px; background: var(--ink); transform: rotate(34deg); }
+            .brand span { display: block; color: #b8c0ba; font: 700 .7rem/1.4 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+            nav { display: flex; gap: 22px; font: 600 .85rem Arial, sans-serif; }
+            nav a { color: #fff; text-decoration: none; }
+            nav a:hover { color: #e0b66f; }
+            .hero { padding: 78px 0 62px; background: linear-gradient(135deg, var(--ink), #394941); color: #fff; }
+            .back { color: #e0b66f; font: 700 .8rem Arial, sans-serif; text-decoration: none; }
+            h1 { max-width: 760px; margin: 20px 0 16px; font-size: clamp(2.8rem, 7vw, 5.8rem); line-height: .92; font-weight: 500; }
+            .description { max-width: 680px; color: #d4ddd8; font: 1.08rem/1.7 Arial, sans-serif; }
+            .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 54px auto 80px; }
+            .photo { margin: 0; background: var(--white); border: 1px solid var(--line); }
+            .photo img { display: block; width: 100%; height: min(52vw, 480px); object-fit: cover; }
+            figcaption { padding: 16px 20px; font: 700 .8rem Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+            .single-photo { max-width: 760px; }
+            .single-photo img { height: min(65vw, 580px); }
+            footer { padding: 24px 0; border-top: 1px solid var(--line); color: var(--muted); font: .85rem Arial, sans-serif; }
+            @media (max-width: 700px) { .top-nav { padding: 16px 0; align-items: flex-start; flex-wrap: wrap; } nav { order: 3; width: 100%; gap: 14px; flex-wrap: wrap; } .hero { padding: 58px 0 48px; } .gallery { grid-template-columns: 1fr; margin-top: 36px; } .photo img { height: 68vw; } }
+        </style>
+    </head>
+    <body>
+        <header class="topbar">
+            <div class="container top-nav">
+                <a class="brand" href="{% url 'home' %}"><strong class="badge" aria-label="Prenga Construction logo">PC</strong><span>Prenga<br>Construction</span></a>
+                <nav aria-label="Main navigation">
+                    <a href="{% url 'home' %}">Kryefaqja</a>
+                    <a href="{% url 'projects' %}">Projektet</a>
+                    <a href="{% url 'contact' %}">Kontakt</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <a class="back" href="{% url 'projects' %}">&larr; Të gjitha projektet</a>
+                    <h1>{{ project.title }}</h1>
+                    <p class="description">{{ project.description }}</p>
+                </div>
+            </section>
+            <section class="container gallery">
+                {% if project.before_image and project.after_image %}
+                <figure class="photo">
+                    <img src="{{ project.before_image.url }}" alt="{{ project.title }} para punimeve">
+                    <figcaption>Para punimeve</figcaption>
+                </figure>
+                <figure class="photo">
+                    <img src="{{ project.after_image.url }}" alt="{{ project.title }} pas përfundimit">
+                    <figcaption>Pas përfundimit</figcaption>
+                </figure>
+                {% else %}
+                <figure class="photo single-photo">
+                    <img src="{{ project.image.url }}" alt="{{ project.title }} i përfunduar">
+                    <figcaption>Projekti i përfunduar</figcaption>
+                </figure>
+                {% endif %}
+            </section>
+        </main>
+        <footer><div class="container">© 2026 Prenga Construction · Durrës, Shqipëri</div></footer>
+    </body>
+</html>
