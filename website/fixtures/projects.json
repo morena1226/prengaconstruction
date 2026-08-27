@@ -1,0 +1,80 @@
+[
+{
+  "model": "website.project",
+  "pk": 1,
+  "fields": {
+    "title": "Përgatitja e çatisë",
+    "description": "Ky projekt paraqet transformimin e plotë të objektit, nga faza fillestare e punimeve deri në përfundimin e çatisë. Procesi përfshin përgatitjen e strukturës, montimin e elementeve të çatisë dhe vendosjen e mbulesës, duke respektuar çdo detaj teknik dhe estetik. Rezultati përfundimtar ofron një çati të qëndrueshme, funksionale dhe të harmonizuar me arkitekturën e banesës, duke garantuar njëkohësisht mbrojtje afatgjatë ndaj kushteve atmosferike.",
+    "image": "projects/pergatitja-caties.jpeg",
+    "before_image": "projects/before/temp_image_FA7C5E79-426E-47FD-B760-1AF7409090EE.jpeg",
+    "after_image": "projects/after/temp_image_15D55700-FF70-435D-BB43-528766D1F735.jpeg",
+    "order": 1,
+    "created_at": "2026-08-25T11:49:23.321Z"
+  }
+},
+{
+  "model": "website.project",
+  "pk": 2,
+  "fields": {
+    "title": "Çati e zezë",
+    "description": "Realizim i një çatie moderne me mbulesë të zezë, e projektuar për të kombinuar qëndrueshmërinë, funksionalitetin dhe estetikën bashkëkohore. Punimet janë kryer me kujdes në çdo detaj, duke siguruar izolim dhe mbrojtje të lartë ndaj kushteve atmosferike. Ngjyra e zezë dhe linjat e pastra arkitekturore i japin objektit një pamje elegante dhe moderne, duke e harmonizuar çatinë me stilin e përgjithshëm të banesës.",
+    "image": "projects/cati-e-zeze.jpeg",
+    "before_image": "projects/before/temp_image_9D276A26-F27E-4285-B018-866970C9D260.jpeg",
+    "after_image": "projects/after/temp_image_2B0B59A5-4A18-4E84-A840-F77725477FD2.jpeg",
+    "order": 2,
+    "created_at": "2026-08-25T11:49:23.323Z"
+  }
+},
+{
+  "model": "website.project",
+  "pk": 4,
+  "fields": {
+    "title": "Rikonstruksion çatie",
+    "description": "Rikonstruksion i plotë i çatisë me ndërhyrje në strukturën ekzistuese, përmirësimin e izolimit dhe zëvendësimin e elementeve të dëmtuara. Punimet realizohen me materiale cilësore dhe kujdes të veçantë në çdo detaj, duke rritur qëndrueshmërinë, sigurinë dhe mbrojtjen e banesës ndaj kushteve atmosferike. Rezultati përfundimtar kombinon funksionalitetin me një pamje të pastër dhe estetike, duke i dhënë çatisë jetëgjatësi dhe një paraqitje të rinovuar.",
+    "image": "projects/temp_image_F4D4925F-7AEA-4F20-9120-7E61C97733C5.jpeg",
+    "before_image": "projects/before/temp_image_F4D4925F-7AEA-4F20-9120-7E61C97733C5.jpeg",
+    "after_image": "projects/after/temp_image_D349EEE2-A6E9-4AD4-895A-BE5565A7B25F.jpeg",
+    "order": 3,
+    "created_at": "2026-08-25T11:49:23.324Z"
+  }
+},
+{
+  "model": "website.project",
+  "pk": 8,
+  "fields": {
+    "title": "Krijime Druri",
+    "description": "Elegancë, natyrë dhe mjeshtëri të ndërthurura në një hapësirë të vetme. Pergolat tona prej druri projektohen për t’i dhënë ambienteve të jashtme ngrohtësi, karakter dhe një stil unik. Nga përzgjedhja e materialeve deri te detaji i fundit, çdo realizim punohet me kujdes për të krijuar një ambient të bukur, të qëndrueshëm dhe harmonik, ku arkitektura prej druri bëhet pjesë natyrale e shtëpisë dhe peizazhit",
+    "image": "projects/A97C169D-4C10-442B-B6DC-DEAC5C2EFC60.png",
+    "before_image": "projects/before/A97C169D-4C10-442B-B6DC-DEAC5C2EFC60.png",
+    "after_image": "projects/after/b28ccc9d-2504-4edb-94aa-12150c298dd7.jpeg",
+    "order": 4,
+    "created_at": "2026-08-26T19:38:23.425Z"
+  }
+},
+{
+  "model": "website.project",
+  "pk": 9,
+  "fields": {
+    "title": "Pergola Tende Druri",
+    "description": "Te Prenga Construction, krijojmë ambiente të jashtme që ndërthurin funksionalitetin, komoditetin dhe estetikën. Pergolat tona realizohen me kujdes në çdo detaj, duke kombinuar strukturat prej druri me elemente moderne dhe hapësira të gjelbëruara. Çdo projekt përshtatet sipas ambientit dhe kërkesave të klientit, për të krijuar një hapësirë të ngrohtë dhe elegante për relaks dhe momente të veçanta.",
+    "image": "projects/6ACD6E9E-D11B-430F-8EFB-37EF9923B020.png",
+    "before_image": "",
+    "after_image": "",
+    "order": 5,
+    "created_at": "2026-08-26T19:47:48.366Z"
+  }
+},
+{
+  "model": "website.project",
+  "pk": 10,
+  "fields": {
+    "title": "Shkallë Druri",
+    "description": "Realizojmë dhe përfundojmë shkallë druri me punim të kujdesshëm dhe preciz, duke i dhënë ambientit ngrohtësi dhe elegancë. Nga përzgjedhja dhe trajtimi i drurit deri te montimi dhe përfundimi i çdo detaji, synojmë një rezultat të pastër, të qëndrueshëm dhe në harmoni me arkitekturën e objektit. Për Prenga Construction, cilësia shihet pikërisht te detajet",
+    "image": "projects/6809AA4F-9F63-4B02-9E07-ACB1FED617B9.png",
+    "before_image": "",
+    "after_image": "",
+    "order": 6,
+    "created_at": "2026-08-26T19:51:43.931Z"
+  }
+}
+]
