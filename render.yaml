@@ -3,7 +3,7 @@ services:
     name: prengaconstruction
     runtime: python
     buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate --noinput
-    startCommand: python manage.py migrate --noinput && python manage.py shell -c "from website.models import Project; import subprocess; Project.objects.exists() or subprocess.run(['python', 'manage.py', 'loaddata', 'website/fixtures/projects.json'], check=True)" && gunicorn PrengaConstruction.wsgi:application
+    startCommand: python manage.py migrate --noinput && python manage.py restore_projects && gunicorn PrengaConstruction.wsgi:application
     envVars:
       - key: DJANGO_DEBUG
         value: "False"
