@@ -9,18 +9,22 @@ def home(request):
 def content_page(request, page):
     pages = {
         'services': {
-            'title': 'Shërbimet',
+            'title': 'Ndërtim dhe riparim çatie në Durrës',
+            'seo_title': 'Ndërtim dhe riparim çatie në Durrës | Prenga Construction',
+            'meta_description': 'Ndërtim çatie, riparim çatie, rikonstruksion, hidroizolim dhe punime druri në Durrës dhe në të gjithë Shqipërinë.',
             'eyebrow': 'Çfarë bëjmë',
-            'intro': 'Zgjidhje të plota për çati, punime druri, rinovime dhe mirëmbajtje.',
+            'intro': 'Ofrojmë zgjidhje të sigurta dhe afatgjata për çati dhe struktura druri në Durrës, si edhe në zona të tjera të Shqipërisë.',
             'sections': [
-                ('Çati', 'Ndërtim, rinovim dhe riparim me materiale të qëndrueshme dhe montim profesional.'),
-                ('Punime druri', 'Struktura, korniza, panelime dhe elemente dekorative të realizuara me precizion.'),
-                ('Rinovim dhe riparime', 'Modernizim i banesave dhe ndërhyrje të shpejta për çdo problem të çatisë ose strukturës.'),
-                ('Izolim dhe mirëmbajtje', 'Mbrojtje termike dhe hidroizolim, së bashku me kontrolle periodike për jetëgjatësi.'),
+                ('Ndërtim çatie', 'Realizojmë çati të reja me strukturë të fortë, materiale cilësore dhe montim profesional, të përshtatura për objektin dhe kushtet e zonës.'),
+                ('Riparim çatie', 'Ndërhyjmë për rrjedhje, tjegulla të dëmtuara dhe probleme të strukturës, duke identifikuar shkakun dhe ofruar një zgjidhje të qëndrueshme.'),
+                ('Rikonstruksion çatie', 'Rinovojmë çatitë e vjetra duke përforcuar ose zëvendësuar pjesët e konsumuara, me kujdes për sigurinë, izolimin dhe pamjen e objektit.'),
+                ('Punime druri', 'Ndërtojmë skelete çatie, streha, pergola, tavane dhe elemente të tjera druri me matje të sakta dhe përfundim cilësor.'),
             ],
         },
         'projects': {
             'title': 'Projektet',
+            'seo_title': 'Projekte çatie dhe punime druri | Prenga Construction',
+            'meta_description': 'Shikoni projekte të realizuara nga Prenga Construction: çati të reja, riparime çatie, rikonstruksione dhe punime druri në Shqipëri.',
             'eyebrow': 'Punimet tona',
             'intro': 'Disa nga punimet e realizuara nga ekipi i Prenga Construction.',
             'sections': [
@@ -32,6 +36,8 @@ def content_page(request, page):
         },
         'about': {
             'title': 'Rreth nesh',
+            'seo_title': 'Rreth Prenga Construction | Specialistë çatie në Durrës',
+            'meta_description': 'Njihuni me Prenga Construction, ekip me mbi 15 vjet përvojë në ndërtim çatie, riparime, rinovime dhe punime druri në Shqipëri.',
             'eyebrow': 'Prenga Construction',
             'intro': 'Punojmë me përkushtim për të ndërtuar hapësira të sigurta, të qëndrueshme dhe të bukura.',
             'sections': [
@@ -42,6 +48,8 @@ def content_page(request, page):
         },
         'contact': {
             'title': 'Kontakt',
+            'seo_title': 'Kontakt për ndërtim dhe riparim çatie në Durrës',
+            'meta_description': 'Kontaktoni Prenga Construction për ofertë dhe këshillim për ndërtim ose riparim çatie, punime druri dhe rinovime në Shqipëri.',
             'eyebrow': 'Flasim për projektin tuaj',
             'intro': 'Na kontaktoni për një vlerësim dhe këshillim të përshtatur për nevojat tuaja.',
             'sections': [

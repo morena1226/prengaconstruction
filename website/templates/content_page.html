@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} | Prenga Construction</title>
-    <meta name="description" content="{{ intro }}">
+    <title>{{ seo_title }}</title>
+    <meta name="description" content="{{ meta_description }}">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://prengaconstruction.al{{ request.path }}">
+    <meta property="og:title" content="{{ seo_title }}">
+    <meta property="og:description" content="{{ meta_description }}">
+    <meta property="og:url" content="https://prengaconstruction.al{{ request.path }}">
+    <meta property="og:type" content="website">
     <style>
         :root { --ink: #18221f; --muted: #64706b; --gold: #d79a45; --paper: #f3f0e8; --line: #d8d5cc; --white: #fffdf8; }
         * { box-sizing: border-box; }
@@ -86,8 +90,8 @@
             <article class="project-card">
                 <div class="project-slider" data-slider>
                     {% if project.before_image and project.after_image %}
-                    <img class="project-slide active" src="{{ project.before_image.url }}" alt="{{ project.title }} para punimeve">
-                    <img class="project-slide" src="{{ project.after_image.url }}" alt="{{ project.title }} pas përfundimit">
+                    <img class="project-slide active" src="{{ project.before_image.url }}" alt="Gjendja fillestare e projektit {{ project.title }}, para punimeve">
+                    <img class="project-slide" src="{{ project.after_image.url }}" alt="Rezultati i përfunduar i projektit {{ project.title }}">
                     <button class="slider-button previous" type="button" data-previous aria-label="Fotoja e mëparshme">&lsaquo;</button>
                     <button class="slider-button next" type="button" data-next aria-label="Fotoja tjetër">&rsaquo;</button>
                     <div class="slider-dots" aria-hidden="true">
@@ -95,7 +99,7 @@
                         <button class="slider-dot" type="button" data-slide="1"></button>
                     </div>
                     {% else %}
-                    <img class="project-slide active" src="{{ project.image.url }}" alt="{{ project.title }} i përfunduar">
+                    <img class="project-slide active" src="{{ project.image.url }}" alt="Projekt i realizuar: {{ project.title }}">
                     {% endif %}
                 </div>
                 <div class="project-copy">

@@ -12,6 +12,67 @@
     <meta property="og:description" content="Çati, punime druri, izolim, rinovim dhe riparime profesionale.">
     <meta property="og:url" content="https://prengaconstruction.al/">
     <meta property="og:type" content="website">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://prengaconstruction.al/#business",
+        "name": "Prenga Construction",
+        "url": "https://prengaconstruction.al/",
+        "telephone": "+355693345460",
+        "email": "pprenga179@gmail.com",
+        "description": "Ndërtim dhe riparim çatie, rikonstruksion çatie dhe punime druri në Durrës dhe Shqipëri.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Durrës",
+            "addressCountry": "AL"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Durrës"
+            },
+            {
+                "@type": "Country",
+                "name": "Shqipëri"
+            }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Shërbimet e Prenga Construction",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Ndërtim çatie"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Riparim çatie"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Rikonstruksion çatie"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Punime druri"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
     <style>
         * { box-sizing: border-box; }
         body {
@@ -884,7 +945,7 @@
                         {% for project in projects %}
                         <a class="project-card-link" href="{% url 'project_detail' project.pk %}">
                         <article class="project-card">
-                            <div class="project-image" style="background-image: url('{{ project.image.url }}');"></div>
+                            <div class="project-image" role="img" aria-label="Projekt i realizuar: {{ project.title }}" style="background-image: url('{{ project.image.url }}');"></div>
                             <div class="body">
                                 <h4>{{ project.title }}</h4>
                                 <p>{{ project.description }}</p>

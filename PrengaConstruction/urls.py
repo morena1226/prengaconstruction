@@ -15,7 +15,12 @@ sitemaps = {
 
 
 def robots_txt(request):
-    content = "User-agent: *\nAllow: /\nSitemap: https://prengaconstruction.al/sitemap.xml\n"
+    content = (
+        "User-agent: *\n"
+        "Allow: /\n"
+        "Disallow: /admin/\n"
+        "Sitemap: https://prengaconstruction.al/sitemap.xml\n"
+    )
     return HttpResponse(content, content_type='text/plain')
 
 urlpatterns = [

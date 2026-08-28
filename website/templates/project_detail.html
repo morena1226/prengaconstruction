@@ -8,6 +8,11 @@
         <meta name="description" content="{{ project.description|striptags|truncatechars:160 }}">
         <meta name="robots" content="index, follow">
         <link rel="canonical" href="https://prengaconstruction.al{{ request.path }}">
+        <meta property="og:title" content="{{ project.title }} | Prenga Construction">
+        <meta property="og:description" content="{{ project.description|striptags|truncatechars:160 }}">
+        <meta property="og:url" content="https://prengaconstruction.al{{ request.path }}">
+        <meta property="og:type" content="article">
+        <meta property="og:image" content="https://prengaconstruction.al{{ project.image.url }}">
         <style>
             :root { --ink: #18221f; --muted: #64706b; --gold: #d79a45; --paper: #f3f0e8; --white: #fffdf8; --line: #d8d5cc; }
             * { box-sizing: border-box; }
@@ -60,16 +65,16 @@
             <section class="container gallery">
                 {% if project.before_image and project.after_image %}
                 <figure class="photo">
-                    <img src="{{ project.before_image.url }}" alt="{{ project.title }} para punimeve">
+                    <img src="{{ project.before_image.url }}" alt="Gjendja fillestare e projektit {{ project.title }}, para punimeve">
                     <figcaption>Para punimeve</figcaption>
                 </figure>
                 <figure class="photo">
-                    <img src="{{ project.after_image.url }}" alt="{{ project.title }} pas përfundimit">
+                    <img src="{{ project.after_image.url }}" alt="Rezultati i përfunduar i projektit {{ project.title }}">
                     <figcaption>Pas përfundimit</figcaption>
                 </figure>
                 {% else %}
                 <figure class="photo single-photo">
-                    <img src="{{ project.image.url }}" alt="{{ project.title }} i përfunduar">
+                    <img src="{{ project.image.url }}" alt="Projekt i realizuar: {{ project.title }}">
                     <figcaption>Projekti i përfunduar</figcaption>
                 </figure>
                 {% endif %}
