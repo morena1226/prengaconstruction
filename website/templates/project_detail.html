@@ -4,7 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg+xml" href="{% static 'website/images/favicon.svg' %}">
         <link rel="icon" type="image/png" sizes="192x192" href="{% static 'website/images/favicon.png' %}">
+        <link rel="apple-touch-icon" href="{% static 'website/images/favicon.png' %}">
         <title>{{ project.title }} | Prenga Construction</title>
         <meta name="description" content="{{ project.description|striptags|truncatechars:160 }}">
         <meta name="robots" content="index, follow">
