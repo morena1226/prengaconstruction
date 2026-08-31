@@ -4,8 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.views.static import serve
 from django.contrib.sitemaps.views import sitemap
-from django.http import HttpResponse
-from django.views.generic.base import RedirectView
+from django.http import FileResponse, HttpResponse
 
 from website.sitemaps import ProjectSitemap, StaticViewSitemap
 
@@ -24,15 +23,13 @@ def robots_txt(request):
     )
     return HttpResponse(content, content_type='text/plain')
 
+
+def favicon(request):
+    favicon_path = settings.BASE_DIR / 'website/static/website/images/favicon.ico'
+    return FileResponse(favicon_path.open('rb'), content_type='image/x-icon')
+
 urlpatterns = [
-    path(
-        'favicon.ico',
-        RedirectView.as_view(
-            url=f"{settings.STATIC_URL}website/images/favicon.png?v=2",
-            permanent=True,
-        ),
-        name='favicon',
-    ),
+    path('favicon.ico', favicon, name='favicon'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', robots_txt, name='robots_txt'),
     path('admin/', admin.site.urls),
