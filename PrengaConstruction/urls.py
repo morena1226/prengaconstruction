@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.views.static import serve
 from django.contrib.sitemaps.views import sitemap
 from django.http import HttpResponse
+from django.views.generic.base import RedirectView
 
 from website.sitemaps import ProjectSitemap, StaticViewSitemap
 
@@ -24,6 +25,14 @@ def robots_txt(request):
     return HttpResponse(content, content_type='text/plain')
 
 urlpatterns = [
+    path(
+        'favicon.ico',
+        RedirectView.as_view(
+            url=f"{settings.STATIC_URL}website/images/favicon.png?v=2",
+            permanent=True,
+        ),
+        name='favicon',
+    ),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', robots_txt, name='robots_txt'),
     path('admin/', admin.site.urls),
